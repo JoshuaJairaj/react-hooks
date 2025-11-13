@@ -11,7 +11,7 @@ function reducer(state:any, action:any) {
   }
 }
 
-export default function UseReducer1() {
+export default function UseReducer2() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

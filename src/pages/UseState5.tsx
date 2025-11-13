@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import CountLabel from './CountLabel.js';
 
 function CountLabel({count}: {count:any} ) {
   const [prevCount, setPrevCount] = useState(count);
@@ -21,7 +20,7 @@ export default function UseState5() {
   const [count, setCount] = useState(0);
   return (
     <>
-      <button onClick={() => setCount(count + 1)}>
+      <button className="border p-2" onClick={() => setCount(count + 1)}>
         Increment
       </button>
       <button onClick={() => setCount(count - 1)}>

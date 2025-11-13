@@ -17,6 +17,12 @@ function Navbar(){
             <NavLink to="/useRef1">UseRef1</NavLink>
             <NavLink to="/useRef2">UseRef2</NavLink>
             <NavLink to="/useReducer1">UseReducer1</NavLink>
+            <NavLink to="/useReducer2">UseReducer2</NavLink>
+            <NavLink to="/useReducer3">UseReducer3</NavLink>
+            <NavLink to="/useCallback1">UseCallback</NavLink>
+            <NavLink to="/useMemo">UseMemo</NavLink>
+            <NavLink to="/useMemoExample">UseMemoExample</NavLink>
+            <NavLink to="/useMemoExample2">UseMemoExample2</NavLink>
             </nav>
         </div>    
     )

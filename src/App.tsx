@@ -6,13 +6,19 @@ import UseState1 from './pages/UseState1';
 import UseState2 from './pages/UseState2';
 import UseState3 from './pages/UseState3';
 import UseState4 from './pages/UseState4';
-import UseState5 from './pages/UseSTate5';
+import UseState5 from './pages/UseState5';
 import UseEffect1 from './pages/UseEffect1';
 import UseEffect2 from './pages/UseEffect2';
 import UseEffect3 from './pages/UseEffect3';
-import UseRef1 from './pages/useRef1';
+import UseRef1 from './pages/UseRef1';
 import UseRef2 from './pages/UseRef2';
 import UseReducer1 from './pages/UseReducer1';
+import UseReducer2 from './pages/UseReducer2';
+import UseReducer3 from './pages/UseReducer3';
+import WithUseCallback from './pages/WithUseCallBack';
+import UseMemo from './pages/UseMemo';
+import UseMemoExample from './pages/UseMemoExample';
+import UseMemoExample2 from './pages/UseMemoExample2';
 
 function App() {
 
@@ -35,6 +41,12 @@ function App() {
           <Route path='/useRef1' element={<UseRef1 />} />
           <Route path='/useRef2' element={<UseRef2 />} />
           <Route path='/useReducer1' element={<UseReducer1 />} />
+          <Route path='/useReducer2' element={<UseReducer2 />} />
+          <Route path='/useReducer3' element={<UseReducer3 />} />
+          <Route path='/useCallback1' element={<WithUseCallback />} />
+          <Route path='/useMemo' element={<UseMemo />} />
+          <Route path='/useMemoExample' element={<UseMemoExample />} />
+          <Route path='/useMemoExample2' element={<UseMemoExample2 />} />
         </Routes>
         </div>
         

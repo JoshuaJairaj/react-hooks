@@ -19,8 +19,8 @@ function UseState3(){
     return(
         <div>
             <div className="flex flex-col">
-                <button onClick={handleCombine} className="border w-fit">+3</button>
-                <button onClick={handleSeperate} className="border w-fit">+1</button>
+                <button onClick={handleCombine} className="border w-fit">+1</button>
+                <button onClick={handleSeperate} className="border w-fit">+3</button>
             </div>
             <p>{count}</p>
         </div>

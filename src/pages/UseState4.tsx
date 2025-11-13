@@ -15,6 +15,7 @@ export default function UseState4() {
         className='border'
           value={form.firstName}
           onChange={e => {
+            console.log(e)
             setForm({
               ...form,
               firstName: e.target.value
@@ -51,7 +52,7 @@ export default function UseState4() {
       <p>
         {form.firstName}{' '}
         {form.lastName}{' '}
-        ({form.email})
+        {form.email}
       </p>
     </>
   );

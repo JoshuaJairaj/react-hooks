@@ -4,8 +4,16 @@ export default function UseEffect1() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log('Effect runs after every render');
-  }); // no dependency array
+    console.log('No depedency');
+  });
+
+  useEffect(() => {
+    console.log('Empty array');
+  },[]);
+
+  useEffect(() => {
+    console.log('with dependency');
+  },[count]);
 
   return (
     <>
