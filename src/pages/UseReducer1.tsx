@@ -6,6 +6,8 @@ function reducer(state:any, action:any) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
     default:
       return state;
   }
@@ -17,7 +19,8 @@ export default function UseReducer1() {
   return (
     <>
       <h1>{state.count}</h1>
-      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>  <br />
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
     </>
   );
 }

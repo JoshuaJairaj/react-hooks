@@ -18,6 +18,7 @@ export default function WithoutUseCallback() {
   const handleClick2 = () => setCount2(count2 + 1);
 
   console.log("Parent rendered");
+
   return (
     <div>
       <h2>Without useCallback:</h2>

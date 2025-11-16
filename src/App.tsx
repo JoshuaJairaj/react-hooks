@@ -19,6 +19,7 @@ import WithUseCallback from './pages/WithUseCallBack';
 import UseMemo from './pages/UseMemo';
 import UseMemoExample from './pages/UseMemoExample';
 import UseMemoExample2 from './pages/UseMemoExample2';
+import WithoutUseCallback from './pages/WithoutUseCallback';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path='/useReducer2' element={<UseReducer2 />} />
           <Route path='/useReducer3' element={<UseReducer3 />} />
           <Route path='/useCallback1' element={<WithUseCallback />} />
+          <Route path='/useCallback2' element={<WithoutUseCallback />} />
           <Route path='/useMemo' element={<UseMemo />} />
           <Route path='/useMemoExample' element={<UseMemoExample />} />
           <Route path='/useMemoExample2' element={<UseMemoExample2 />} />

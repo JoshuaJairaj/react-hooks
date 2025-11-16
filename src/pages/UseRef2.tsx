@@ -9,6 +9,7 @@ export default function UseRef2() {
 
   return (
     <>
+    <p>UseRef2</p>
       <input className='border' ref={inputRef} />
       <button className="border p-2 m-2" onClick={handleClick}>
         Focus the input

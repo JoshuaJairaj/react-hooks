@@ -1,26 +1,51 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
-function reducer(state: any, action: any) {
+// Reducer for todos
+function todoReducer(state: string[], action: { type: string; payload?: string }) {
   switch (action.type) {
-    case "increment":
-      return state + 1;
+    case "add":
+      return [...state, action.payload!];
+    case "remove":
+      return state.filter((todo, index) => index !== Number(action.payload));
     default:
       return state;
   }
 }
 
-function createInitialState() {
-  console.log("createInitialState called!");
-  return 0;
+// Expensive function to read from localStorage
+function initTodos() {
+  console.log("Reading todos from localStorage...");
+  const storedTodos = localStorage.getItem("todos");
+  return storedTodos ? JSON.parse(storedTodos) : [];
 }
 
 export default function UseReducer3() {
-  const [count, dispatch] = useReducer(reducer, null, createInitialState); // passed as third argument (when the initial function is computation expensive) 
+  const [todos, dispatch] = useReducer(todoReducer, [], initTodos);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+
+  const addTodo = () => {
+    const todo = prompt("Enter a todo");
+    if (todo) dispatch({ type: "add", payload: todo });
+  };
 
   return (
-    <>
-      <p>Count: {count}</p>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-    </>
+    <div>
+      <h2>My Todos</h2>
+      <button onClick={addTodo}>Add Todo</button>
+      <ul>
+        {todos.map((todo, idx) => (
+          <li key={idx}>
+            {todo}{"  -> "}
+            <button  className="border" onClick={() => dispatch({ type: "remove", payload: String(idx) })}>
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
